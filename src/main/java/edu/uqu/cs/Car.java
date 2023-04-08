@@ -21,7 +21,8 @@ public class Car{
      * private dataType name;
      *
      */
-
+    private String model;
+    private boolean inOutGarage;
     /************ Part 2 **************/
     /**
      * Define a default constructor and set 
@@ -33,7 +34,10 @@ public class Car{
      *      //body
      * }
      */
-
+    public Car () {
+        model= "";
+        inOutGarage= false;
+    }
     /************ Part 3 **************/
     /**
      * Define all getter methods below
