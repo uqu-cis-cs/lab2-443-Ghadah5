@@ -47,7 +47,12 @@ public class Car{
      *      return this.InstanceVariableName;
      * }
      */
-
+    public String getModel (){
+              return this.model;
+     } 
+    public boolean getInOutGarage (){
+         return this.inOutGarage;
+     }
 
     /************ Part 4 **************/
     /**
@@ -58,8 +63,12 @@ public class Car{
      * }
      *
      */
-
-
+    public void setModel (String n){
+          this.model= n;
+    }
+    public void setInOutGarage (boolean n){
+             this.inOutGarage= n;
+    }
     /************ Part 5 **************/
     /**
      * Implement the following two methods
@@ -67,7 +76,14 @@ public class Car{
      * moveCarIn() to set the inOutGarage flag to true;
      *
      */
-
+public void moveCarOut(){
+   boolean n= false;
+    setInOutGarage(n);
+}
+public void moveCarIn(){
+    boolean n= true;
+     setInOutGarage(n);
+ }
 
 
 }
