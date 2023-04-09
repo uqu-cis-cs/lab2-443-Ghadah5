@@ -77,13 +77,12 @@ public class Car{
      *
      */
 public void moveCarOut(){
-   boolean n= false;
-    setInOutGarage(n);
+    inOutGarage = false;
+    
 }
 public void moveCarIn(){
-    boolean n= true;
-     setInOutGarage(n);
- }
+    inOutGarage = true;
+}
 
 
 }
