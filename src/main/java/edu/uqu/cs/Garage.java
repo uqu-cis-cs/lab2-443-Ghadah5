@@ -21,7 +21,7 @@ public class Garage{
      * private classType [] varName = new classType[size];
      *
      */
-
+    private Car [] cars = new Car [3];
     /************ Part 2 **************/
     /**
      * Decalre a static/class variable named countCars
@@ -31,7 +31,7 @@ public class Garage{
      * public dataType varName= value;
      *
      */
-
+     public static int countCars =0;
     /************ Part 3 **************/
     /**
      * Define a default constructor to create
@@ -45,7 +45,11 @@ public class Garage{
      *     }
      *}
      */
-
+    public Garage (){
+         	   for(int i=0; i<cars.length; i++){
+                 cars[i]= new Car();
+             }
+        }
     /************ Part 4 **************/
     /**
      * Define addCar(String parameter) that adds a new car (by model) to the garage 
@@ -59,7 +63,9 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-
+    public void addCar(String m){
+        
+    }
 
     /************ Part 5 **************/
     /**
@@ -71,11 +77,11 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+     public void moveOut(String m){
 
-
-
+     }
     /************ Part 6 **************/
-    /**
+    /**      //moveIn(String)
      * Define moveOut(String) that moves the car (by model) into the garage; 
      * hint you must first search if the car is in the list of cars, 
      * then use moveCarIn () method of class Car;
@@ -84,8 +90,9 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    public void moveIn(String m){
 
-
+    }
     /************ Part 7 **************/
     /**
      * Define listCars() to display/list all the cars in the garage;
@@ -95,7 +102,9 @@ public class Garage{
      * public void methodName(String m)
      *
      */
+    public void listCars(String m){
 
+    }
 
 
 }
