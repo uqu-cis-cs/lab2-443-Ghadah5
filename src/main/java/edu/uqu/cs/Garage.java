@@ -63,8 +63,22 @@ public class Garage{
      * Syntax:
      * public void methodName(String m)
      */
-    public void addCar(String m){
-        
+    public void addCar(String model){
+        boolean flagCars = false;
+        for(int i=0 ; i<countCars ; i++){
+            if(cars[i].getModel().equals(model)){
+                flagCars = true;
+                cars[i].moveCarIn();
+            }
+        } if(!flagCars){
+            if(countCars<cars.length){
+            Car car =new Car();
+            car.setModel(model);
+            cars[countCars]= car;
+            cars[countCars].moveCarIn();
+            countCars++;
+        }
+      }
     }
 
     /************ Part 5 **************/
@@ -77,8 +91,12 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-     public void moveOut(String m){
-
+     public void moveOut(String model){
+        for(int i=0 ; i<countCars ; i++){
+            if(cars[i].getModel().equals(model)){
+                cars[i].moveCarOut();
+            }
+        }
      }
     /************ Part 6 **************/
     /**      //moveIn(String)
@@ -90,8 +108,12 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-    public void moveIn(String m){
-
+    public void moveIn(String model){
+        for(int i=0 ; i<countCars ; i++){
+            if(cars[i].getModel().equals(model)){
+                cars[i].moveCarIn();
+            }
+        }
     }
     /************ Part 7 **************/
     /**
@@ -102,8 +124,15 @@ public class Garage{
      * public void methodName(String m)
      *
      */
-    public void listCars(String m){
-
+    public void listCars(){
+        System.out.println("All cars in the garage are:");
+        for(int i=0 ; i<countCars ; i++){
+           if(cars[i].getInOutGarage()) {
+                System.out.println("car "+(i+1)+":"+cars[i].getModel());   
+                
+            }
+        }
+        System.out.println();
     }
 
 
